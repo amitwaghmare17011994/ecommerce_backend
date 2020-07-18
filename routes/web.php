@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('products/{id?}','ProductsController@show');
+Route::get('add_product','ProductsController@create');
+

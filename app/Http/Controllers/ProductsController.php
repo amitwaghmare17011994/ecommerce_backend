@@ -24,7 +24,17 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        $date=date("Y-m-d");
+        $product=new ProductsData();
+        $product->name="amit";
+        $product->category_id=1;
+        $product->description="sample";
+        $product->slug="sample";
+        $product->price=6;
+        $product->photo="ss";
+        $product->date_view=$date;
+        $product->counter=0;
+        $product->save();
     }
 
     /**
@@ -48,7 +58,6 @@ class ProductsController extends Controller
     {
         return  isset($id) ? ProductsData::where("id", $id)->get() : ProductsData::all();
     }
-
 
     /**
      * Show the form for editing the specified resource.

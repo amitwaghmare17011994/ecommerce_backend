@@ -10,6 +10,8 @@ class ProductsData extends Model
     protected $fillable = [
         'name', 'email'
     ];
+public $timestamps = false;
+
 
 
     //
